@@ -1,11 +1,13 @@
 const date = new Date();
 
-const viewYear = date.getFullYear();
-const viewMonth = date.getMonth();
-document.querySelector(".current_yearMonth").textContent = `${viewYear}년 ${viewMonth+1}월`;
+const currYear = date.getFullYear();
+const currMonth = date.getMonth()
+const viewMonth = (currMonth+1).toString().padStart(2, "0");
 
-const prevLastDay = new Date(viewYear, viewMonth, 0);
-const thisLastDay = new Date(viewYear, viewMonth+1, 0);
+document.querySelector(".current_yearMonth").textContent = `${currYear} - ${viewMonth}`;
+
+const prevLastDay = new Date(currYear, currMonth, 0);
+const thisLastDay = new Date(currYear, currMonth+1, 0);
 
 const PLDate = prevLastDay.getDate();
 const PLDay = prevLastDay.getDay();
