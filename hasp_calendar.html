@@ -8,8 +8,12 @@
     <body>
         <div class="Calendar">
             <div class="calandar_head">
-                <div class="current_yearMonth">2024-04</div>   <!-- 현재 연도와 날짜를 표시하는 공간.-->
-                <div class="calandar_nav"></div>    <!-- 월 이동 버튼 및 TODAY 버튼을 담은 공간. -->
+                <div class="current_yearMonth"></div>   <!-- 현재 연도와 날짜를 표시하는 공간.-->
+                <div class="calandar_nav">    <!-- 월 이동 버튼 및 TODAY 버튼을 담은 공간. -->
+                    <button class = "nav_btn go_prev">&lt;</button>
+                    <button class = "nav_btn go_curr">TODAY</button>
+                    <button class = "nav_btn go_next">&gt;</button>
+                </div>    
             </div>
             <div class="date_main">    <!-- 실질적인 달력을 표시할 공간. -->
                 <div class="days">    <!-- 요일을 표시하는 공간 -->
@@ -21,7 +25,7 @@
                     <div class="day">금</div>
                     <div class="day">토</div>
                 </div>
-                <div class="date"></div>    <!-- 날짜를 표시하는 공간 -->
+                <div class="dates"></div>    <!-- 날짜를 표시하는 공간 -->
             </div>
         </div>
         <div class="emotions">    <!-- 감정 등을 기록하는 공간 -->
@@ -30,5 +34,6 @@
             <div class="diary"></div>    <!-- 느꼈던 감정에 대한 짧은 설명을 작성하는 공간. -->
             <div class="emotions_nav"></div>    <!-- 기록했던 것을 저장하거나 초기화하는 버튼을 담은 공간. -->
         </div>
+        <script src="index.js"></script>
     </body>
 </html>
