@@ -5,7 +5,8 @@ function loadDates() {
     const currMonth = date.getMonth();
     const viewMonth = (currMonth + 1).toString().padStart(2, "0");
 
-    document.querySelector(".current_yearMonth").textContent = `${currYear} - ${viewMonth}`;
+    document.querySelector(".year").textContent = `${currYear}`;
+    document.querySelector(".month").textContent = `${viewMonth}`;
 
     const prevLastDay = new Date(currYear, currMonth, 0);
     const thisLastDay = new Date(currYear, currMonth + 1, 0);
@@ -42,7 +43,7 @@ function loadDates() {
                 ? 'this'
                 : 'other'
 
-        dates[i] = `<div class="date"><span class="${condition}">${date}<span></div>`;
+        dates[i] = `<div class="date ${condition}"><span class="dateItm">${date}</span></div>`;
     });
 
     document.querySelector('.dates').innerHTML = dates.join('');
